@@ -57,7 +57,7 @@ export const perks = [
     discounts: [
       {
         ad_type_id: 3,
-        min: 4,
+        min: 3,
         price: 379.99,
       },
     ],
@@ -89,7 +89,7 @@ export const perks = [
     discounts: [
       {
         ad_type_id: 3,
-        min: 3,
+        min: 2,
         price: 389.99,
       },
     ],

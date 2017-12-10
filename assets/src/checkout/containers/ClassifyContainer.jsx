@@ -36,7 +36,7 @@ const ClassifyContainer = (props) => {
 
   const onContinueClicked = () => {
     if (job) {
-      props.addJob(quote, job).then(() => {
+      props.addJob(user, quote, job).then(() => {
         props.goTo('/checkout');
       });
     } else if (quote.jobs.length > 0) {
@@ -49,7 +49,7 @@ const ClassifyContainer = (props) => {
       return;
     }
     const adType = adTypesWithMods.find(a => a.id === job.adType.id);
-    props.addJob(quote, { ...job, isStored: false, adType });
+    props.addJob(user, quote, { ...job, isStored: false, adType });
   };
 
   return (
