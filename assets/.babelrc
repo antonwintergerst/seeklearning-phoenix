@@ -1,5 +1,9 @@
 {
-  "plugins": ["syntax-dynamic-import", "transform-runtime"],
+  "plugins": [
+    "syntax-object-rest-spread",
+    "syntax-dynamic-import",
+    "transform-runtime"
+  ],
   "presets": [
     [
       "es2015",

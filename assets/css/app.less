@@ -3,6 +3,8 @@ body {
 }
 h2.ui.header {
   margin: 5rem 0rem 3rem;
+  text-align: center;
+  font-weight: normal;
 }
 .header {
   .business-menu {
@@ -75,4 +77,27 @@ h2.ui.header {
 }
 main {
   margin: 30px auto 20px
+}
+.ui.button.pink {
+  background: #e60278;
+}
+
+.ad-selection-form {
+  .ui.table {
+    tr.active, td.active {
+      background-color: #fff !important;
+    }
+    .price-suffix {
+      font-size: 0.7rem;
+      font-weight: normal;
+    }
+    .button {
+      &.active {
+        color: #e60278;
+        border-color: #d6d6d6;
+        border-bottom: 3px solid #e60278;
+        background-color: #fff;
+      }
+    }
+  }
 }

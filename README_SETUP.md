@@ -159,6 +159,7 @@ yarn add redux
 yarn add redux-thunk
 yarn add react-router
 yarn add react-router-redux
+yarn add babel-preset-stage-2 -D
 ```
 2. Create a Redux store to match [assets/src/Store.jsx](assets/src/Store.jsx)
 3. Create the Routes component [assets/src/Routes.jsx](assets/src/Routes.jsx)
