@@ -15,8 +15,14 @@ use Mix.Config
 # which you typically run after static files are built.
 config :seek_learning, SeekLearningWeb.Endpoint,
   load_from_system_env: true,
-  url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  url: [host: "seek.awinterg.com", port: 80],
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
+
+config :seek_learning, SeekLearning.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: System.get_env("DATABASE_URL"),
+  pool_size: 15
 
 # Do not print debug messages in production
 config :logger, level: :info
