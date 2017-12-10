@@ -16,6 +16,23 @@ const CheckoutContainer = (props) => {
     return null;
   }
 
+  const quoteGroupedByPrice = {
+    ...quote,
+    products: quote.jobs.reduce((acc, job) => {
+      const product = job.adType;
+      const exists = acc.find(p => p.id === product.id && p.price === product.price);
+      if (exists) {
+        return acc.map((p) => {
+          if (p.id === product.id && p.price === product.price) {
+            return { ...p, quantity: p.quantity + 1 };
+          }
+          return p;
+        });
+      }
+      return [...acc, { ...product, quantity: 1 }];
+    }, []),
+  };
+
   const onContinueClicked = () => {
 
   };
@@ -25,7 +42,7 @@ const CheckoutContainer = (props) => {
   return (
     <div className="ui container">
       <h2 className="ui header">Review quote</h2>
-      <OrderSummary products={quote.products} />
+      <OrderSummary products={quoteGroupedByPrice.products} />
       {user &&
         <MockUserCard user={user} perks={perks} />
       }

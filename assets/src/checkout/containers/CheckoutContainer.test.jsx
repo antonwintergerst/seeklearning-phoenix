@@ -17,6 +17,15 @@ describe('CheckoutContainer', () => {
     checkout: {
       quote,
     },
+    home: {
+      user: {
+        id: 1,
+        name: 'Matt Giampietro',
+        occupation: 'Producer, Unilever',
+        perks: [1],
+        avatar: '/dist/images/matthew.png',
+      },
+    },
   };
 
   let store;

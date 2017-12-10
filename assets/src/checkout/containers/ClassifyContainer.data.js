@@ -59,5 +59,6 @@ export const adTypes = [
 ];
 
 export const quote = {
+  jobs: adTypes.map(adType => ({ ...{}, adType })),
   products: adTypes,
 };

@@ -41,7 +41,7 @@ exports[`OrderSummary renders as expected 1`] = `
             className="price"
           >
             $
-            275
+            269.99
           </span>
           <span
             className="price-suffix"
@@ -68,7 +68,7 @@ exports[`OrderSummary renders as expected 1`] = `
             className="price"
           >
             $
-            330
+            322.99
           </span>
           <span
             className="price-suffix"
@@ -95,7 +95,7 @@ exports[`OrderSummary renders as expected 1`] = `
             className="price"
           >
             $
-            330
+            394.99
           </span>
           <span
             className="price-suffix"

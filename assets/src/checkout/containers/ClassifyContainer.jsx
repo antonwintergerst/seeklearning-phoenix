@@ -17,14 +17,15 @@ const ClassifyContainer = (props) => {
 
   let adTypesWithMods = adTypes.map(adType => ({ ...adType, isActive: job && job.adType.id === adType.id }));
   if (user.perks) {
+    // apply user discounts
     const discounts = user.perks.map(pid => perks.find(p => p.id === pid)).reduce((acc, perk) => acc.concat(perk.discounts), []);
     adTypesWithMods = adTypesWithMods.map((adType) => {
       const discount = discounts.find(d => d.ad_type_id === adType.id);
       if (discount) {
-        const appliesToOrder = !discount.min || quote.products.find(p => p.id === adType.id && p.quantity % discount.min === 0);
+        // ensure quote meets minimum product order
+        const appliesToOrder = !discount.min || quote.products.find(p => p.id === adType.id && (p.quantity + 1) % discount.min === 0);
         if (appliesToOrder) {
-          const newAdType = { ...adType, price: discount.price || 0 };
-          return newAdType;
+          return { ...adType, price: discount.price || 0 };
         }
       }
       return adType;
@@ -45,7 +46,8 @@ const ClassifyContainer = (props) => {
     if (!job) {
       return;
     }
-    props.addJob(quote, { ...job, isStored: false });
+    const adType = adTypesWithMods.find(a => a.id === job.adType.id);
+    props.addJob(quote, { ...job, isStored: false, adType });
   };
 
   return (

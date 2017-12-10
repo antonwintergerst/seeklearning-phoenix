@@ -45,7 +45,7 @@ exports[`ClassifyContainer renders as expected 1`] = `
               className="price"
             >
               $
-              275
+              269.99
             </span>
             <span
               className="price-suffix"
@@ -60,7 +60,7 @@ exports[`ClassifyContainer renders as expected 1`] = `
               className="price"
             >
               $
-              330
+              322.99
             </span>
             <span
               className="price-suffix"
@@ -75,7 +75,7 @@ exports[`ClassifyContainer renders as expected 1`] = `
               className="price"
             >
               $
-              330
+              394.99
             </span>
             <span
               className="price-suffix"
@@ -737,6 +737,12 @@ exports[`ClassifyContainer renders as expected 1`] = `
     onClick={[Function]}
   >
     Continue
+  </button>
+  <button
+    className="ui button"
+    onClick={[Function]}
+  >
+    Add job
   </button>
 </div>
 `;

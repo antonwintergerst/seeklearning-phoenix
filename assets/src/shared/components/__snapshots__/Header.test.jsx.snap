@@ -16,25 +16,21 @@ exports[`Header renders as expected 1`] = `
       >
         <a
           className="item"
-          href="/#"
         >
           Jobs
         </a>
         <a
           className="item active"
-          href="/#"
         >
           Courses
         </a>
         <a
           className="item"
-          href="/#"
         >
           Businesses for sale
         </a>
         <a
           className="item"
-          href="/#"
         >
           Volunteering
         </a>

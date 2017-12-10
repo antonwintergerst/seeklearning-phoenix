@@ -16,11 +16,11 @@ export const setAdType = adType => (dispatch) => {
 
 export const addJob = (quote, job) => (dispatch) => {
   if (!job.isStored) {
-    const exists = quote.products.find(product => product.id === job.adType.id && product.price === job.adType.price);
+    const exists = quote.products.find(product => product.id === job.adType.id);
     let products;
     if (exists) {
       products = quote.products.map((product) => {
-        if (product.id === job.adType.id && product.price === job.adType.price) {
+        if (product.id === job.adType.id) {
           return { ...product, quantity: product.quantity + 1 };
         }
         return product;

@@ -41,7 +41,9 @@ exports[`CheckoutContainer renders as expected 1`] = `
           </td>
           <td
             className="center aligned"
-          />
+          >
+            1
+          </td>
           <td
             className="center aligned"
           >
@@ -49,7 +51,7 @@ exports[`CheckoutContainer renders as expected 1`] = `
               className="price"
             >
               $
-              275
+              269.99
             </span>
             <span
               className="price-suffix"
@@ -68,7 +70,9 @@ exports[`CheckoutContainer renders as expected 1`] = `
           </td>
           <td
             className="center aligned"
-          />
+          >
+            1
+          </td>
           <td
             className="center aligned"
           >
@@ -76,7 +80,7 @@ exports[`CheckoutContainer renders as expected 1`] = `
               className="price"
             >
               $
-              330
+              322.99
             </span>
             <span
               className="price-suffix"
@@ -95,7 +99,9 @@ exports[`CheckoutContainer renders as expected 1`] = `
           </td>
           <td
             className="center aligned"
-          />
+          >
+            1
+          </td>
           <td
             className="center aligned"
           >
@@ -103,7 +109,7 @@ exports[`CheckoutContainer renders as expected 1`] = `
               className="price"
             >
               $
-              330
+              394.99
             </span>
             <span
               className="price-suffix"
@@ -114,6 +120,41 @@ exports[`CheckoutContainer renders as expected 1`] = `
         </tr>
       </tbody>
     </table>
+  </div>
+  <div
+    className="ui card"
+  >
+    <div
+      className="image"
+    >
+      <img
+        alt=""
+        src="/dist/images/matthew.png"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        Matt Giampietro
+      </div>
+      <div
+        className="meta"
+      >
+        <span>
+          Producer, Unilever
+        </span>
+      </div>
+      <div
+        className="description"
+      >
+        <p>
+          Gets a for **3 for 2 deal on Classic Ads**
+        </p>
+      </div>
+    </div>
   </div>
   <button
     className="ui huge button pink continue"
