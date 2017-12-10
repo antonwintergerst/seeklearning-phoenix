@@ -45,7 +45,17 @@ exports[`CheckoutContainer renders as expected 1`] = `
           <td
             className="center aligned"
           >
-            275
+            <span
+              className="price"
+            >
+              $
+              275
+            </span>
+            <span
+              className="price-suffix"
+            >
+              +GST
+            </span>
           </td>
         </tr>
         <tr>
@@ -62,7 +72,17 @@ exports[`CheckoutContainer renders as expected 1`] = `
           <td
             className="center aligned"
           >
-            330
+            <span
+              className="price"
+            >
+              $
+              330
+            </span>
+            <span
+              className="price-suffix"
+            >
+              +GST
+            </span>
           </td>
         </tr>
         <tr>
@@ -79,7 +99,17 @@ exports[`CheckoutContainer renders as expected 1`] = `
           <td
             className="center aligned"
           >
-            330
+            <span
+              className="price"
+            >
+              $
+              330
+            </span>
+            <span
+              className="price-suffix"
+            >
+              +GST
+            </span>
           </td>
         </tr>
       </tbody>

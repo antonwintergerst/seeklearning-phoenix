@@ -14,6 +14,10 @@ describe('ClassifyContainer', () => {
 
   const initialState = {
     checkout: {
+      quote: {
+        products: [],
+        jobs: [],
+      },
       job: null,
     },
   };

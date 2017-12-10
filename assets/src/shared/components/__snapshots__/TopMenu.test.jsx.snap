@@ -9,7 +9,7 @@ exports[`TopMenu renders as expected 1`] = `
   >
     <a
       className="item active"
-      href="/#"
+      onClick={[Function]}
     >
       <svg
         height="22px"

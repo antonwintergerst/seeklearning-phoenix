@@ -1,6 +1,7 @@
 import React from 'react';
 // redux
 import { connect } from 'react-redux';
+import { goTo } from '../../actions/router';
 import { setAdType, addProduct } from '../actions';
 
 import AdSelectionForm from '../components/AdSelectionForm';
@@ -13,6 +14,14 @@ const ClassifyContainer = (props) => {
     if (!job) {
       return;
     }
+    props.addProduct(quote, job).then(() => {
+      props.goTo('/checkout');
+    });
+  };
+  const onAddClicked = () => {
+    if (!job) {
+      return;
+    }
     props.addProduct(quote, job);
   };
   return (
@@ -20,6 +29,12 @@ const ClassifyContainer = (props) => {
       <h2 className="ui header">Choose your style of ad</h2>
       <AdSelectionForm adTypes={adTypesState} adFeatures={adFeatures} onSelectClicked={props.setAdType} />
       <button className="ui huge button pink continue" onClick={onContinueClicked}>Continue</button>
+      <button className="ui button" onClick={onAddClicked}>Add job</button>
+      {quote.jobs.length > 0 &&
+      <span className="ui tag labels">
+        <span className="ui label">Jobs pending: {quote.jobs.length}</span>
+      </span>
+      }
     </div>
   );
 };
@@ -31,6 +46,7 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, {
+  goTo,
   setAdType,
   addProduct,
 })(ClassifyContainer);

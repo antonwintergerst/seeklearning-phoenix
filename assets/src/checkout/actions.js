@@ -15,11 +15,11 @@ export const setAdType = adType => (dispatch) => {
 };
 
 export const addProduct = (quote, job) => (dispatch) => {
-  const exists = quote.products.map(product => product).find(product => product.adType.id === job.adType.id);
+  const exists = quote.products.find(product => product.id === job.adType.id);
   let products;
   if (exists) {
     products = quote.products.map((product) => {
-      if (product.adType.id === job.adType.id) {
+      if (product.id === job.adType.id) {
         return { ...product, quantity: product.quantity + 1 };
       }
       return product;
@@ -30,12 +30,16 @@ export const addProduct = (quote, job) => (dispatch) => {
   const newQuote = {
     ...quote,
     products,
+    jobs: [...quote.jobs, job],
   };
   dispatch({
     type: QUOTE_CHANGED,
     payload: newQuote,
   });
-  dispatch(push('checkout'));
+  dispatch({
+    type: QUOTE_JOB_CHANGED,
+    payload: null,
+  });
 };
 
 export const moveToAddAnotherJob = () => (dispatch) => {

@@ -20,7 +20,8 @@ const OrderSummary = ({ products }) => (
               {product.quantity}
             </td>
             <td className="center aligned">
-              {product.price}
+              <span className="price">${product.price}</span>
+              <span className="price-suffix">+GST</span>
             </td>
           </tr>
         ))}
