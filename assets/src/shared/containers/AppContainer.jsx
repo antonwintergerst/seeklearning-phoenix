@@ -1,7 +1,8 @@
 import React from 'react';
 // redux
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-// import { goTo } from '../../actions/router';
+import { goTo } from '../../actions/router';
 
 import Header from '../../shared/components/Header';
 import TopMenu from '../../shared/components/TopMenu';
@@ -22,6 +23,6 @@ const AppContainer = props => (
 const mapStateToProps = state => ({
 });
 
-export default connect(mapStateToProps, {
-  // goTo,
-})(AppContainer);
+export default withRouter(connect(mapStateToProps, {
+  goTo,
+})(AppContainer));

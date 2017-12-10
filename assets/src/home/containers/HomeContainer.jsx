@@ -1,4 +1,5 @@
 import React from 'react';
+
 // redux
 import { connect } from 'react-redux';
 import { setUser } from '../actions';
