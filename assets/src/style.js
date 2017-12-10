@@ -1,5 +1,3 @@
-import '../css/app.less';
-
 import 'semantic-ui-less/definitions/globals/site';
 import 'semantic-ui-less/definitions/behaviors/api';
 import 'semantic-ui-less/definitions/behaviors/colorize';
@@ -26,3 +24,5 @@ import 'semantic-ui-less/definitions/modules/tab';
 import 'semantic-ui-less/definitions/modules/transition';
 
 import '../css/semantic.less';
+
+import '../css/app.less';

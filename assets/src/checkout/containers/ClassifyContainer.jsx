@@ -4,10 +4,8 @@ import { adTypes, adFeatures } from './ClassifyContainer.data';
 
 const ClassifyContainer = () => (
   <div className="ui container">
-    <h3 className="ui header">Choose your style of ad</h3>
-    <div className="ui basic segment">
-      <AdSelectionForm adTypes={adTypes} adFeatures={adFeatures} />
-    </div>
+    <h2 className="ui header">Choose your style of ad</h2>
+    <AdSelectionForm adTypes={adTypes} adFeatures={adFeatures} />
   </div>
 );
 
