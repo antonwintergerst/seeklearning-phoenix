@@ -181,6 +181,9 @@ cd assets
 yarn add babel-jest -D
 yarn add react-test-renderer -D
 yarn add babel-preset-es2015 -D
+yarn add enzyme -D
+yarn add enzyme-adapter-react-16 -D
+yarn add redux-mock-store -D
 ```
 3. Create the Jest config [assets/jest.config.json](assets/jest.config.json)
 4. Configure babel [assets/.babelrc](assets/.babelrc)

@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MockUsers renders as expected 1`] = `
+<div
+  className="ui four link cards"
+>
+  <div
+    className="card"
+    onClick={[Function]}
+  >
+    <div
+      className="image"
+    >
+      <img
+        alt=""
+        src="/dist/images/matthew.png"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        Matt Giampietro
+      </div>
+      <div
+        className="meta"
+      >
+        <span>
+          Producer, Unilever
+        </span>
+      </div>
+      <div
+        className="description"
+      />
+    </div>
+    <div
+      className="ui bottom attached button"
+    >
+      Sign in
+    </div>
+  </div>
+  <div
+    className="card"
+    onClick={[Function]}
+  >
+    <div
+      className="image"
+    >
+      <img
+        alt=""
+        src="/dist/images/molly.png"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        Molly
+      </div>
+      <div
+        className="meta"
+      >
+        <span>
+          Head of Product, Apple
+        </span>
+      </div>
+      <div
+        className="description"
+      />
+    </div>
+    <div
+      className="ui bottom attached button"
+    >
+      Sign in
+    </div>
+  </div>
+  <div
+    className="card"
+    onClick={[Function]}
+  >
+    <div
+      className="image"
+    >
+      <img
+        alt=""
+        src="/dist/images/elyse.png"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        Elyse
+      </div>
+      <div
+        className="meta"
+      >
+        <span>
+          Social Media Manager, Nike
+        </span>
+      </div>
+      <div
+        className="description"
+      />
+    </div>
+    <div
+      className="ui bottom attached button"
+    >
+      Sign in
+    </div>
+  </div>
+  <div
+    className="card"
+    onClick={[Function]}
+  >
+    <div
+      className="image"
+    >
+      <img
+        alt=""
+        src="/dist/images/elliot.jpg"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        Elliot
+      </div>
+      <div
+        className="meta"
+      >
+        <span>
+          Service Advisor, Ford
+        </span>
+      </div>
+      <div
+        className="description"
+      />
+    </div>
+    <div
+      className="ui bottom attached button"
+    >
+      Sign in
+    </div>
+  </div>
+</div>
+`;

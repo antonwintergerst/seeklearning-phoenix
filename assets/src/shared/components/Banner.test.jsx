@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactTestRenderer from 'react-test-renderer';
-import TopMenu from './TopMenu';
+import Banner from './Banner';
 
-describe('TopMenu', () => {
+describe('Banner', () => {
   it('renders as expected', () => {
-    const tree = ReactTestRenderer.create(<TopMenu />).toJSON();
+    const tree = ReactTestRenderer.create(<Banner />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

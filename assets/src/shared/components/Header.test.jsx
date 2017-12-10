@@ -4,7 +4,7 @@ import Header from './Header';
 
 describe('Header', () => {
   it('renders as expected', () => {
-    const tree = ReactTestRenderer.create(<div><Header /></div>).toJSON();
+    const tree = ReactTestRenderer.create(<Header />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

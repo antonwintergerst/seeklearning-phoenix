@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon renders as expected 1`] = `
+<svg
+  height="22px"
+  style={
+    Object {
+      "display": "inline-block",
+      "verticalAlign": "middle",
+    }
+  }
+  viewBox="0 0 23 22"
+  width="23px"
+>
+  <path
+    d="M19.462 13.08V22h-5.308v-5.946H8.846V22H4.128v-8.92H0L11.795 0 23 13.08h-3.538"
+    style={
+      Object {
+        "fill": "#fff",
+      }
+    }
+  />
+</svg>
+`;

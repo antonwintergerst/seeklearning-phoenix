@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner renders as expected 1`] = `
+<div
+  className="banner"
+>
+  <div
+    className="ui container center aligned"
+  >
+    <h1
+      className="ui header"
+    >
+      Get where you want to be in your career
+    </h1>
+  </div>
+</div>
+`;

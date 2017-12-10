@@ -4,7 +4,7 @@ import CheckoutContainer from './CheckoutContainer';
 
 describe('CheckoutContainer', () => {
   it('renders as expected', () => {
-    const tree = ReactTestRenderer.create(<div><CheckoutContainer /></div>).toJSON();
+    const tree = ReactTestRenderer.create(<CheckoutContainer />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

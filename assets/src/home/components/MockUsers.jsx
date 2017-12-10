@@ -5,7 +5,7 @@ import Icon from '../../shared/components/Icon';
 const MockUsers = ({ users, onClicked }) => (
   <div className="ui four link cards">
     {users.map(user => (
-      <div className="card" onClick={() => { onClicked(user); }}>
+      <div key={user.id} className="card" onClick={() => { onClicked(user); }}>
         <div className="image">
           <img src={user.avatar} alt="" />
         </div>

@@ -2,8 +2,6 @@
 
 exports[`CheckoutContainer renders as expected 1`] = `
 <div>
-  <div>
-    Hello checkout
-  </div>
+  Hello checkout
 </div>
 `;

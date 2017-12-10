@@ -1,42 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header renders as expected 1`] = `
-<div>
-  <header
-    className="header"
-    role="banner"
+<header
+  className="header"
+  role="banner"
+>
+  <div
+    className="business-menu"
   >
-    <nav
-      className="ui menu"
+    <div
+      className="ui container"
     >
-      <a
-        className="item"
-        href="/#"
+      <nav
+        className="ui menu"
       >
-        Jobs
-      </a>
-      <a
-        className="item"
-        href="/#"
-      >
-        Courses
-      </a>
-      <a
-        className="item"
-        href="/#"
-      >
-        Businesses for sale
-      </a>
-      <a
-        className="item"
-        href="/#"
-      >
-        Volunteering
-      </a>
-    </nav>
-    <span
-      className="logo"
+        <a
+          className="item"
+          href="/#"
+        >
+          Jobs
+        </a>
+        <a
+          className="item active"
+          href="/#"
+        >
+          Courses
+        </a>
+        <a
+          className="item"
+          href="/#"
+        >
+          Businesses for sale
+        </a>
+        <a
+          className="item"
+          href="/#"
+        >
+          Volunteering
+        </a>
+      </nav>
+    </div>
+  </div>
+  <div
+    className="ui logo container"
+  >
+    <img
+      alt="Seek Learning"
+      src="/dist/images/seeklearning-logo.svg"
     />
-  </header>
-</div>
+  </div>
+</header>
 `;

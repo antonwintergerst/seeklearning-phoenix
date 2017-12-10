@@ -1,36 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TopMenu renders as expected 1`] = `
-<div>
-  <div>
-    <nav
-      className="ui menu"
+<div
+  className="top-menu"
+>
+  <nav
+    className="ui menu container"
+  >
+    <a
+      className="item active"
+      href="/#"
     >
-      <a
-        className="item"
-        href="/#"
+      <svg
+        height="22px"
+        style={
+          Object {
+            "display": "inline-block",
+            "verticalAlign": "middle",
+          }
+        }
+        viewBox="0 0 23 22"
+        width="23px"
       >
-        Home
-      </a>
-      <a
-        className="item"
-        href="/#"
-      >
-        Courses
-      </a>
-      <a
-        className="item"
-        href="/#"
-      >
-        Careers
-      </a>
-      <a
-        className="item"
-        href="/#"
-      >
-        Studying
-      </a>
-    </nav>
-  </div>
+        <path
+          d="M19.462 13.08V22h-5.308v-5.946H8.846V22H4.128v-8.92H0L11.795 0 23 13.08h-3.538"
+          style={
+            Object {
+              "fill": "#fff",
+            }
+          }
+        />
+      </svg>
+    </a>
+    <a
+      className="item"
+      href="/#"
+    >
+      Courses
+    </a>
+    <a
+      className="item"
+      href="/#"
+    >
+      Careers
+    </a>
+    <a
+      className="item"
+      href="/#"
+    >
+      Studying
+    </a>
+  </nav>
 </div>
 `;
