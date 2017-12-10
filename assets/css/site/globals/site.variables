@@ -1,0 +1,9 @@
+@fontName          : 'Helvetica Neue';
+@emSize : 16px;
+@fontSize: 16px;
+@textColor           : #46617C;
+@white            : #FFFFFF;
+@grayColorForHeader : #9BA9B6;
+
+@headerTextColor : #97A6B4; 
+@transparentBlue : rgb(33,133,208, 0.05);

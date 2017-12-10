@@ -1,0 +1,2 @@
+<div id="app"><%= raw @html %></div>
+<script>window.SERVER_STORE=<%= @initial_state |> Poison.encode! |> raw %></script>

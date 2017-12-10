@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeContainer renders as expected 1`] = `
+<div>
+  <div>
+    <h1
+      className="ui header"
+    >
+      Get where you want to be in your career
+    </h1>
+  </div>
+</div>
+`;

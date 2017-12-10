@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopMenu renders as expected 1`] = `
+<div>
+  <div>
+    <nav
+      className="ui menu"
+    >
+      <a
+        className="item"
+        href="/#"
+      >
+        Home
+      </a>
+      <a
+        className="item"
+        href="/#"
+      >
+        Courses
+      </a>
+      <a
+        className="item"
+        href="/#"
+      >
+        Careers
+      </a>
+      <a
+        className="item"
+        href="/#"
+      >
+        Studying
+      </a>
+    </nav>
+  </div>
+</div>
+`;
