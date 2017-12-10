@@ -26,6 +26,16 @@ const OrderSummary = ({ products }) => (
           </tr>
         ))}
       </tbody>
+      <tfoot className="center aligned">
+        <tr>
+          <th>Total</th>
+          <th>{products.reduce((acc, p) => acc + p.quantity, 0)}</th>
+          <th>
+            <span className="price">${products.reduce((acc, p) => acc + (p.quantity * p.price), 0)}</span>
+            <span className="price-suffix">+GST</span>
+          </th>
+        </tr>
+      </tfoot>
     </table>
   </div>
 );

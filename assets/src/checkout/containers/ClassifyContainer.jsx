@@ -22,8 +22,10 @@ const ClassifyContainer = (props) => {
     adTypesWithMods = adTypesWithMods.map((adType) => {
       const discount = discounts.find(d => d.ad_type_id === adType.id);
       if (discount) {
-        // ensure quote meets minimum product order
-        const appliesToOrder = !discount.min || quote.products.find(p => p.id === adType.id && (p.quantity + 1) % discount.min === 0);
+        // ensure quote meets occurrence requirement
+        let appliesToOrder = !discount.every || quote.products.find(p => p.id === adType.id && (p.quantity + 1) % discount.every === 0);
+        // ensure quote meets min requirement
+        appliesToOrder = appliesToOrder && !discount.min || quote.products.find(p => p.id === adType.id && p.quantity >= discount.min);
         if (appliesToOrder) {
           return { ...adType, price: discount.price || 0 };
         }

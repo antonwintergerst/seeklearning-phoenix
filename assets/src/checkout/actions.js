@@ -2,6 +2,8 @@ import { push } from 'react-router-redux';
 
 export const QUOTE_JOB_CHANGED = 'QUOTE_JOB_CHANGED';
 export const QUOTE_CHANGED = 'QUOTE_CHANGED';
+export const QUOTE_RESET = 'QUOTE_RESET';
+export const QUOTE_JOB_RESET = 'QUOTE_JOB_RESET';
 
 export const setAdType = adType => (dispatch) => {
   const newJob = {
