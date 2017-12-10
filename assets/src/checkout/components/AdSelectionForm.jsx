@@ -3,7 +3,7 @@ import { ICONS } from '../../constants';
 import Icon from '../../shared/components/Icon';
 
 const AdSelectionForm = ({ adTypes, adFeatures }) => (
-  <div className="ui segment">
+  <div className="ui basic segment">
     <table className="ui celled table">
       <thead className="center aligned">
         <tr>

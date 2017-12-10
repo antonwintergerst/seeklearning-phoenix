@@ -4,7 +4,7 @@ import Header from '../../shared/components/Header';
 import TopMenu from '../../shared/components/TopMenu';
 
 const AppContainer = ({ children }) => (
-  <div className="ui container">
+  <div>
     <Header />
     <TopMenu />
     <main role="main">
