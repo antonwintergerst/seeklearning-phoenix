@@ -14,32 +14,35 @@ export const setAdType = adType => (dispatch) => {
   });
 };
 
-export const addProduct = (quote, job) => (dispatch) => {
-  const exists = quote.products.find(product => product.id === job.adType.id);
-  let products;
-  if (exists) {
-    products = quote.products.map((product) => {
-      if (product.id === job.adType.id) {
-        return { ...product, quantity: product.quantity + 1 };
-      }
-      return product;
+export const addJob = (quote, job) => (dispatch) => {
+  if (!job.isStored) {
+    const exists = quote.products.find(product => product.id === job.adType.id && product.price === job.adType.price);
+    let products;
+    if (exists) {
+      products = quote.products.map((product) => {
+        if (product.id === job.adType.id && product.price === job.adType.price) {
+          return { ...product, quantity: product.quantity + 1 };
+        }
+        return product;
+      });
+    } else {
+      products = [...quote.products, { ...job.adType, quantity: 1 }];
+    }
+    const newQuote = {
+      ...quote,
+      products,
+      jobs: [...quote.jobs, job],
+    };
+    dispatch({
+      type: QUOTE_CHANGED,
+      payload: newQuote,
     });
-  } else {
-    products = [...quote.products, { ...job.adType, quantity: 1 }];
+    dispatch({
+      type: QUOTE_JOB_CHANGED,
+      payload: { ...job, isStored: true },
+    });
   }
-  const newQuote = {
-    ...quote,
-    products,
-    jobs: [...quote.jobs, job],
-  };
-  dispatch({
-    type: QUOTE_CHANGED,
-    payload: newQuote,
-  });
-  dispatch({
-    type: QUOTE_JOB_CHANGED,
-    payload: null,
-  });
+  return Promise.resolve();
 };
 
 export const moveToAddAnotherJob = () => (dispatch) => {

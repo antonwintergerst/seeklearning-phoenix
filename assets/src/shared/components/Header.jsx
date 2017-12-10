@@ -5,10 +5,10 @@ const Header = () => (
     <div className="business-menu">
       <div className="ui container">
         <nav className="ui menu">
-          <a className="item" href="/#">Jobs</a>
-          <a className="item active" href="/#">Courses</a>
-          <a className="item" href="/#">Businesses for sale</a>
-          <a className="item" href="/#">Volunteering</a>
+          <a className="item">Jobs</a>
+          <a className="item active">Courses</a>
+          <a className="item">Businesses for sale</a>
+          <a className="item">Volunteering</a>
         </nav>
       </div>
     </div>

@@ -33,10 +33,23 @@ export const perks = [
   {
     id: 1,
     description: 'Gets a for **3 for 2 deal on Classic Ads**',
+    discounts: [
+      {
+        ad_type_id: 1,
+        min: 3,
+        bonus: 1,
+      },
+    ],
   },
   {
     id: 2,
     description: 'Gets a discount on **Standout Ads where the price drops to $299.99 per ad**',
+    discounts: [
+      {
+        ad_type_id: 2,
+        price: 299.99,
+      },
+    ],
   },
   {
     id: 3,

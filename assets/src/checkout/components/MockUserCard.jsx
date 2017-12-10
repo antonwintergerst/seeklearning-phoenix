@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MockUserCard = ({ user, perks }) => (
-  <div key={user.id} className="card">
+  <div className="ui card">
     <div className="image">
       <img src={user.avatar} alt="" />
     </div>

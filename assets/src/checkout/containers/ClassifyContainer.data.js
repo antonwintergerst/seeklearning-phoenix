@@ -41,19 +41,19 @@ export const adTypes = [
   {
     id: 1,
     name: 'Classic',
-    price: 275,
+    price: 269.99,
     features: [1, 2, 3, 4],
   },
   {
     id: 2,
     name: 'StandOut',
-    price: 330,
+    price: 322.99,
     features: [1, 2, 3, 4, 5, 6, 7],
   },
   {
     id: 3,
     name: 'Guaranteed Hire',
-    price: 330,
+    price: 394.99,
     features: [1, 2, 3, 4, 5, 6, 7, 8, 9],
   },
 ];

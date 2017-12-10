@@ -2,6 +2,7 @@ import React from 'react';
 
 // redux
 import { connect } from 'react-redux';
+import { goTo } from '../../actions/router';
 import { moveToAddAnotherJob } from '../actions';
 
 import OrderSummary from '../components/OrderSummary';
@@ -10,6 +11,11 @@ import { perks } from '../../home/containers/HomeContainer.data';
 
 const CheckoutContainer = (props) => {
   const { quote, user } = props;
+  if (!user) {
+    props.goTo('/');
+    return null;
+  }
+
   const onContinueClicked = () => {
 
   };
@@ -30,9 +36,10 @@ const CheckoutContainer = (props) => {
 };
 // Redux state mapping
 const mapStateToProps = state => ({
+  user: state.home.user,
   quote: state.checkout.quote,
 });
 
 export default connect(mapStateToProps, {
-  moveToAddAnotherJob,
+  goTo, moveToAddAnotherJob,
 })(CheckoutContainer);
