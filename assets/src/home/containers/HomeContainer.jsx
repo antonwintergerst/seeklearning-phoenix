@@ -1,12 +1,23 @@
 import React from 'react';
-import { users } from './HomeContainer.data';
-import MockUsers from '../components/MockUsers';
-import { onUserSelected } from '../actions';
+// redux
+import { connect } from 'react-redux';
+import { setUser } from '../actions';
 
-const HomeContainer = () => (
+import { users, perks } from './HomeContainer.data';
+import MockUsers from '../components/MockUsers';
+
+const HomeContainer = props => (
   <div className="ui container">
     <h2 className="ui header">Select your persona</h2>
-    <MockUsers users={users} onClicked={onUserSelected} />
+    <MockUsers users={users} perks={perks} onClicked={props.setUser} />
   </div>
 );
-export default HomeContainer;
+
+// Redux state mapping
+const mapStateToProps = state => ({
+  user: state.home.user,
+});
+
+export default connect(mapStateToProps, {
+  setUser,
+})(HomeContainer);

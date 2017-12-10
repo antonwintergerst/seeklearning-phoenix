@@ -35,7 +35,7 @@ describe('ClassifyContainer', () => {
   });
 
   it('renders as expected', () => {
-    const tree = ReactTestRenderer.create(<div>container</div>).toJSON();
+    const tree = ReactTestRenderer.create(container).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

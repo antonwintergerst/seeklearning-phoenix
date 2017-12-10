@@ -4,7 +4,9 @@ import {
 } from './actions';
 
 const initialState = {
-  quote: null,
+  quote: {
+    products: [],
+  },
   job: null,
 };
 

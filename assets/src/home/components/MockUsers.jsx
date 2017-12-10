@@ -1,8 +1,6 @@
 import React from 'react';
-import { ICONS } from '../../constants';
-import Icon from '../../shared/components/Icon';
 
-const MockUsers = ({ users, onClicked }) => (
+const MockUsers = ({ users, perks, onClicked }) => (
   <div className="ui four link cards">
     {users.map(user => (
       <div key={user.id} className="card" onClick={() => { onClicked(user); }}>
@@ -15,7 +13,9 @@ const MockUsers = ({ users, onClicked }) => (
             <span>{user.occupation}</span>
           </div>
           <div className="description">
-            {user.description}
+            {user.perks.map(pid => perks.find(perk => perk.id === pid)).map(perk => (
+              <p key={perk.id}>{perk.description}</p>
+            ))}
           </div>
         </div>
         <div className="ui bottom attached button">

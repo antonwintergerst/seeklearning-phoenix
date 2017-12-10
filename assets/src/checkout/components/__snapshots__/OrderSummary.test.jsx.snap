@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderSummary renders as expected 1`] = `
+<div
+  className="ui basic segment ad-selection-form"
+>
+  <table
+    className="ui celled striped table"
+  >
+    <thead
+      className="center aligned"
+    >
+      <tr>
+        <th>
+          Product
+        </th>
+        <th>
+          Qty
+        </th>
+        <th>
+          Price
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div
+            className="ui ribbon label"
+          >
+            Classic
+          </div>
+        </td>
+        <td
+          className="center aligned"
+        />
+        <td
+          className="center aligned"
+        >
+          275
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="ui ribbon label"
+          >
+            StandOut
+          </div>
+        </td>
+        <td
+          className="center aligned"
+        />
+        <td
+          className="center aligned"
+        >
+          330
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="ui ribbon label"
+          >
+            Guaranteed Hire
+          </div>
+        </td>
+        <td
+          className="center aligned"
+        />
+        <td
+          className="center aligned"
+        >
+          330
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
