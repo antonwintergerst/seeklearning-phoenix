@@ -263,3 +263,89 @@ yarn add postcss-loader -D
   * [assets/css/app.less](assets/css/app.less)
   * [assets/css/semantic.less](assets/css/semantic.less)
   * [assets/css/theme.config](assets/css/theme.config)
+
+## Dokku
+
+Container to run the serverside application.
+
+1. Update [config/prod.exs](config/prod.exs) with:
+```
+# ...
+config :seek_learning, SeekLearningWeb.Endpoint,
+  load_from_system_env: true,
+  url: [host: System.get_env("HOSTNAME"), port: 80],
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
+  
+config :seek_learning, SeekLearning.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: System.get_env("DATABASE_URL"),
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
+# ...
+# import_config "prod.secret.exs"
+```
+2. Add the buildpacks [.buildpacks](.buildpacks)
+```
+https://github.com/HashNuke/heroku-buildpack-elixir.git
+https://github.com/gjaldon/heroku-buildpack-phoenix-static.git
+```
+3. Configure the elixir buildpack [elixir_buildpack.config](elixir_buildpack.config)
+```
+# Erlang version
+erlang_version=20.1.7
+
+# Elixir version
+elixir_version=1.5.2
+
+# Always rebuild from scratch on every deploy?
+always_rebuild=true
+
+# Export heroku config vars
+config_vars_to_export=(DATABASE_URL PORT HOSTNAME SECRET_KEY_BASE)
+```
+4. Configure the phoenix buildpack [phoenix_static_buildpack.config](phoenix_static_buildpack.config)
+```
+node_version=9.2.1
+npm_version=5.6.0
+assets_path=assets
+phoenix_ex=phx
+```
+5. Create the app config [app.json](app.json)
+```
+{
+  "name": "SeekLearning",
+  "description": "",
+  "keywords": [
+  ],
+  "scripts": {
+    "dokku": {
+      "predeploy": "mix do ecto.create, ecto.migrate"
+    }
+  }
+}
+```
+6. Create the compile script [compile](compile)
+```
+npm --prefix ./assets run deploy
+mix phx.digest
+```
+7. Create new Dokku App
+```
+ssh root@someserver.com
+dokku apps:create seek
+dokku config:set seek HOSTNAME=seek.someserver.com
+dokku config:set seek LC_ALL=en_US.utf8
+dokku config:set seek SECRET_KEY_BASE=the_value_in_my_prod_secret_file
+dokku plugin:install https://github.com/dokku/dokku-postgres.git postgres
+dokku postgres:create seek
+dokku postgres:link seek seek
+exit
+```
+8. Add dokku to Git remote
+```
+git remote add dokku dokku@someserver.com:seek
+```
+9. Push master to remote
+```
+git push dokku master
+```

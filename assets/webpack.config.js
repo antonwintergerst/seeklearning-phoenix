@@ -95,7 +95,7 @@ module.exports = [
     },
     devtool: isProduction ? 'source-map' : 'eval-cheap-module-source-map',
     plugins: [
-      new CleanWebpackPlugin([join('priv/static/dist')], { root: `${__dirname}/..` }),
+      new CleanWebpackPlugin([join('../priv/static/dist')], { allowExternal: true }),
       new CopyWebpackPlugin([{
         from: web('static'),
         to: join('../priv/static/dist'),

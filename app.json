@@ -1,0 +1,11 @@
+{
+  "name": "SeekLearning",
+  "description": "",
+  "keywords": [
+  ],
+  "scripts": {
+    "dokku": {
+      "predeploy": "mix do ecto.create, ecto.migrate"
+    }
+  }
+}
