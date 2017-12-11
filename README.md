@@ -2,6 +2,9 @@
 
 This is an example Phoenix application with serverside rendering of React components.
 
+## Demo
+[http://seek.awinterg.com](http://seek.awinterg.com)
+
 ## Preview
 ![Preview GIF](https://github.com/antonwintergerst/seeklearning-phoenix/raw/master/preview.gif)
 
