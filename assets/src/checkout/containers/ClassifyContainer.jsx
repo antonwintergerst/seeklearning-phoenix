@@ -20,7 +20,7 @@ const ClassifyContainer = (props) => {
     // apply user discounts
     const discounts = user.perks.map(pid => perks.find(p => p.id === pid)).reduce((acc, perk) => acc.concat(perk.discounts), []);
     adTypesWithMods = adTypesWithMods.map((adType) => {
-      const discount = discounts.find(d => d.ad_type_id === adType.id);
+      const discount = discounts.find(d => d.ad_type_id === adType.id || d.any_product === true);
       if (discount) {
         // ensure quote meets occurrence requirement
         let appliesToOrder = !discount.every || quote.products.find(p => p.id === adType.id && (p.quantity + 1) % discount.every === 0);
@@ -30,8 +30,22 @@ const ClassifyContainer = (props) => {
           return { ...adType, price: discount.price || 0 };
         }
       }
+
       return adType;
     });
+
+    if (user.introductoryOffer && user.introductoryOffer.any_product === true) {
+      const appliesToQuote = quote.jobs.length >= user.introductoryOffer.min;
+
+      if (appliesToQuote) {
+        adTypesWithMods = adTypesWithMods.map((adType) => {
+          if (adType.id === user.introductoryOffer.ad_type_id) {
+            return { ...adType, price: user.introductoryOffer.price || 0 };
+          }
+          return adType;
+        });
+      }
+    }
   }
 
   const onContinueClicked = () => {

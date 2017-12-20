@@ -39,6 +39,12 @@ export const adFeatures = [
 
 export const adTypes = [
   {
+    id: 4,
+    name: 'Jora Local',
+    price: 99,
+    features: [1],
+  },
+  {
     id: 1,
     name: 'Classic',
     price: 269.99,
